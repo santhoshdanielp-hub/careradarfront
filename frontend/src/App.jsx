@@ -15,7 +15,8 @@ const TYPES = [
 function Recenter({ pos }) {
   const map = useMap();
   useEffect(() => {
-    map.flyTo([pos.lat, pos.lng], 11, { duration: 1.2 });
+    map.invalidateSize();
+    map.setView([pos.lat, pos.lng], 11);
   }, [pos.lat, pos.lng]);
   return null;
 }
