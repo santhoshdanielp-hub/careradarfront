@@ -183,9 +183,9 @@ export default function App() {
       <div className="map-wrap">
         <MapContainer center={[pos.lat, pos.lng]} zoom={11} style={{ height: "100%", width: "100%" }}>
           <Recenter pos={pos} />
-          <TileLayer
-            attribution="© OpenStreetMap contributors © CARTO"
-            url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+         <TileLayer
+            attribution="© OpenStreetMap contributors"
+            url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <CircleMarker center={[pos.lat, pos.lng]} radius={8} pathOptions={{ color: "#2b7fff", fillOpacity: 1 }}>
             <Popup>You are here</Popup>
